@@ -1,8 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
 	<struct>
-		<and abstract="true" mandatory="true" name="Ejercicio3mensajeriaInstantanea">
-			<feature name="Base"/>
+		<and abstract="true" mandatory="true" name="MensajeriaInstantanea">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="gestion">
+				<feature mandatory="true" name="cuenta"/>
+				<and mandatory="true" name="contactos">
+					<or name="data">
+						<feature name="importar"/>
+						<feature name="exportar"/>
+					</or>
+					<and mandatory="true" name="buscar">
+						<feature name="Búsqueda web extendida"/>
+					</and>
+					<or mandatory="true" name="almacenamiento">
+						<feature name="local"/>
+						<feature name="linea"/>
+					</or>
+				</and>
+				<feature name="mensajes de estado"/>
+			</and>
+			<and mandatory="true" name="llamadas">
+				<feature mandatory="true" name="VoIP"/>
+				<feature name="videollamadas"/>
+			</and>
+			<and mandatory="true" name="mensajeria">
+				<feature mandatory="true" name="chats grupales"/>
+			</and>
+			<and name="compartir">
+				<feature name="archivos"/>
+				<feature name="pantalla"/>
+			</and>
 		</and>
 	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Búsqueda web extendida</var>
+				<var>linea</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>pantalla</var>
+				<var>archivos</var>
+			</imp>
+		</rule>
+	</constraints>
 </featureModel>

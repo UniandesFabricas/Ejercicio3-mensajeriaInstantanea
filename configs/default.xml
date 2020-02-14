@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-	<feature name="Ejercicio3mensajeriaInstantanea"/>
-	<feature name="Base"/>
+	<feature automatic="selected" name="MensajeriaInstantanea"/>
+	<feature automatic="selected" name="gestion"/>
+	<feature automatic="selected" name="cuenta"/>
+	<feature automatic="selected" name="contactos"/>
+	<feature name="data"/>
+	<feature name="importar"/>
+	<feature name="exportar"/>
+	<feature automatic="selected" name="buscar"/>
+	<feature name="Búsqueda web extendida"/>
+	<feature automatic="selected" name="almacenamiento"/>
+	<feature manual="selected" name="local"/>
+	<feature name="linea"/>
+	<feature name="mensajes de estado"/>
+	<feature automatic="selected" name="llamadas"/>
+	<feature automatic="selected" name="VoIP"/>
+	<feature name="videollamadas"/>
+	<feature automatic="selected" name="mensajeria"/>
+	<feature automatic="selected" name="chats grupales"/>
+	<feature automatic="selected" name="compartir"/>
+	<feature manual="selected" name="archivos"/>
+	<feature name="pantalla"/>
 </configuration>
